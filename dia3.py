@@ -6,6 +6,7 @@ apellidos_lista=[]#lista de apellidos
 numeros_telefonicos=[]#lista de numeros telefonicos
 correos_electronicos=[]#lista de correos electronicos
 i_ds=[] #lista de ids
+listado=[i_ds,apellidos_lista,numeros_telefonicos,i_ds]
 
 cantidad_usuarios   =  input('Ingresa la cantidad de nuevos usuarios a registrar: ')
 for i_d in range(int(cantidad_usuarios)):
@@ -49,14 +50,15 @@ for i_d in range(int(cantidad_usuarios)):
     apellidos_lista.append(apellidos)
     numeros_telefonicos.append(numero_de_telefono)
     correos_electronicos.append(correo_electronico)
+    listado = [i_ds, nombres, apellidos_lista, numeros_telefonicos,correos_electronicos]
 
 for i in range(len(i_ds)):
 
-    print('ID: '+ str(i))
-    print('Nombre(s): '+ nombres[i])
-    print('Apellido(s)' + apellidos_lista[i])
-    print('Numero telefónico: ' + numeros_telefonicos[i])
-    print('Correo electronico: ' + correos_electronicos[i])
+    print('ID: '+ str(listado[i][i]))
+    print('Nombre(s): '+ listado[1][i])
+    print('Apellido(s)' + listado[2][i])
+    print('Numero telefónico: ' + listado[3][i])
+    print('Correo electronico: ' + listado[4][i])
     print(' ----------------------------------------------')
 
 #fin
